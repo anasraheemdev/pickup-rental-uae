@@ -1,43 +1,136 @@
-<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="emblemBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#0f1f33" />
-      <stop offset="50%" stopColor="#081421" />
-      <stop offset="100%" stopColor="#040a12" />
+    <!-- Background Dark Obsidian Gradients -->
+    <radialGradient id="coreGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#192f4d" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#0a1524" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#030810" />
+    </radialGradient>
+    <linearGradient id="squircleBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.95" />
+      <stop offset="30%" stop-color="#f59e0b" stop-opacity="0.7" />
+      <stop offset="70%" stop-color="#b45309" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0.85" />
     </linearGradient>
-    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#ffe071" />
-      <stop offset="50%" stopColor="#fbbc2b" />
-      <stop offset="100%" stopColor="#d9970a" />
+    <linearGradient id="innerBevel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Truck Metallic Gold Gradient -->
+    <linearGradient id="truckGold" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#fff1a8" />
+      <stop offset="25%" stop-color="#fcd34d" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="85%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#92400e" />
+    </linearGradient>
+
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="45%" stop-color="#fef08a" />
+      <stop offset="55%" stop-color="#ffffff" />
+      <stop offset="65%" stop-color="#fde047" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Windshield Glass Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.85" />
+      <stop offset="35%" stop-color="#1e3a8a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#020617" stop-opacity="0.98" />
     </linearGradient>
   </defs>
 
-  <!-- Squircle Base Shield -->
-  <rect x="4" y="4" width="112" height="112" rx="26" fill="url(#emblemBg)" stroke="#fbbc2b" stroke-width="3" />
+  <!-- Ambient Outer Glow -->
+  <rect x="48" y="48" width="928" height="928" rx="230" fill="#f59e0b" opacity="0.18" />
 
-  <!-- Highway Line -->
-  <path d="M18 88 L102 88" stroke="#fbbc2b" stroke-width="3.5" stroke-linecap="round" stroke-opacity="0.8" />
+  <!-- Master Squircle Container with 3D Bevel -->
+  <rect x="48" y="48" width="928" height="928" rx="220" fill="url(#coreGlow)" stroke="url(#squircleBevel)" stroke-width="16" />
+  <!-- Inner Glass Specular Ring -->
+  <rect x="64" y="64" width="896" height="896" rx="204" fill="none" stroke="url(#innerBevel)" stroke-width="6" />
 
-  <!-- Forward Movement Chevron -->
-  <path d="M98 52 L106 58 L98 64" stroke="#fbbc2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Highway Speed Grid / Ground Rays -->
+  <g opacity="0.85">
+    <!-- Horizon Line -->
+    <line x1="120" y1="730" x2="904" y2="730" stroke="url(#goldShine)" stroke-width="10" stroke-linecap="round" />
+    <!-- Secondary Speed Ground Rails -->
+    <line x1="190" y1="770" x2="834" y2="770" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity="0.45" />
+    <line x1="280" y1="805" x2="744" y2="805" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity="0.3" />
+  </g>
 
-  <!-- Pickup Cab & Cargo Bed -->
-  <path d="M48 40 L68 40 C73 40, 78 44, 81 49 L89 60 L48 60 Z" fill="url(#goldGradient)" />
-  <path d="M54 44 L67 44 C70 44, 73 46, 75 50 L81 57 L54 57 Z" fill="#081421" />
+  <!-- Aerodynamic Forward Wind Chevrons -->
+  <g>
+    <path d="M810 430 L870 490 L810 550" stroke="url(#goldShine)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M860 445 L905 490 L860 535" stroke="url(#goldShine)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" />
+  </g>
 
-  <path d="M24 58 L46 58 L48 48 L48 60 L92 60 C96 60, 99 63, 98 67 L95 76 C94 78, 92 80, 89 80 L25 80 C23 80, 21 78, 21 75 L22 62 C22 60, 23 58, 24 58 Z" fill="url(#goldGradient)" />
+  <!-- Commercial Heavy Pickup Truck Illustration Group -->
+  <g>
+    <!-- Upper Cab Aerodynamic Slanted Roof -->
+    <path d="M420 310 L590 310 C635 310, 675 345, 700 390 L770 500 L420 500 Z" fill="url(#truckGold)" />
+    
+    <!-- Tinted Windshield Glass with Specular Glare -->
+    <path d="M470 340 L585 340 C615 340, 642 360, 660 395 L705 470 L470 470 Z" fill="url(#glassGrad)" />
+    <!-- Windshield Glare Stripe -->
+    <path d="M500 350 L560 350 L505 460 L480 460 Z" fill="#ffffff" opacity="0.35" />
 
-  <!-- Cargo Freight Box -->
-  <rect x="26" y="45" width="19" height="14" rx="2" fill="#ffffff" />
-  <path d="M28 47 L43 57 M43 47 L28 57" stroke="#081421" stroke-width="1.5" />
+    <!-- Main Chassis Body (Front Cab + Heavy Cargo Bed) -->
+    <path d="M200 480 L400 480 L420 390 L420 500 L790 500 C830 500, 860 530, 850 570 L825 650 C815 670, 790 685, 765 685 L210 685 C185 685, 165 665, 170 640 L180 520 C185 495, 195 480, 200 480 Z" fill="url(#truckGold)" />
 
-  <!-- Headlight Beam -->
-  <path d="M93 64 L102 65 C104 65, 104 67, 102 68 L92 69 Z" fill="#ffffff" />
+    <!-- Chrome Body Accent Sweep -->
+    <path d="M195 530 L790 530 L805 570 L190 570 Z" fill="url(#goldShine)" opacity="0.9" />
 
-  <!-- Heavy-Duty Wheels -->
-  <circle cx="80" cy="80" r="11" fill="#081421" stroke="#fbbc2b" stroke-width="2.8" />
-  <circle cx="80" cy="80" r="4.5" fill="url(#goldGradient)" />
+    <!-- Commercial Freight Cargo Cube (High-Tech Package) in Cargo Bed -->
+    <g>
+      <!-- Base Freight Container -->
+      <rect x="225" y="360" width="165" height="130" rx="16" fill="#ffffff" />
+      <!-- Container Texture / Straps -->
+      <rect x="225" y="360" width="165" height="130" rx="16" fill="none" stroke="#cbd5e1" stroke-width="6" />
+      <line x1="245" y1="380" x2="370" y2="470" stroke="#0f172a" stroke-width="8" stroke-linecap="round" opacity="0.35" />
+      <line x1="370" y1="380" x2="245" y2="470" stroke="#0f172a" stroke-width="8" stroke-linecap="round" opacity="0.35" />
+      <!-- Cargo Secure Badge -->
+      <circle cx="307" cy="425" r="20" fill="#f59e0b" />
+      <path d="M299 425 L305 431 L316 419" stroke="#081421" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
 
-  <circle cx="38" cy="80" r="11" fill="#081421" stroke="#fbbc2b" stroke-width="2.8" />
-  <circle cx="38" cy="80" r="4.5" fill="url(#goldGradient)" />
+    <!-- Front LED High-Intensity Headlight Projection -->
+    <path d="M800 540 L890 550 C915 553, 915 567, 890 570 L795 580 Z" fill="#ffffff" />
+    <path d="M830 550 L950 540 L970 580 L830 570 Z" fill="#fef08a" opacity="0.35" />
+
+    <!-- Rear Tail Light -->
+    <rect x="170" y="535" width="14" height="40" rx="6" fill="#ef4444" />
+
+    <!-- Front Wheel Assembly -->
+    <g>
+      <!-- Tire Outer Rim with Tread -->
+      <circle cx="690" cy="685" r="100" fill="#040910" stroke="#f59e0b" stroke-width="16" />
+      <circle cx="690" cy="685" r="80" fill="#0f172a" />
+      <!-- Alloy Wheel Spokes -->
+      <circle cx="690" cy="685" r="60" fill="none" stroke="url(#truckGold)" stroke-width="14" />
+      <!-- Golden Center Cap -->
+      <circle cx="690" cy="685" r="30" fill="url(#goldShine)" />
+      <circle cx="690" cy="685" r="12" fill="#081421" />
+    </g>
+
+    <!-- Rear Wheel Assembly -->
+    <g>
+      <!-- Tire Outer Rim with Tread -->
+      <circle cx="335" cy="685" r="100" fill="#040910" stroke="#f59e0b" stroke-width="16" />
+      <circle cx="335" cy="685" r="80" fill="#0f172a" />
+      <!-- Alloy Wheel Spokes -->
+      <circle cx="335" cy="685" r="60" fill="none" stroke="url(#truckGold)" stroke-width="14" />
+      <!-- Golden Center Cap -->
+      <circle cx="335" cy="685" r="30" fill="url(#goldShine)" />
+      <circle cx="335" cy="685" r="12" fill="#081421" />
+    </g>
+  </g>
+
+  <!-- Dynamic Star Sparkle Top Right -->
+  <g transform="translate(790, 180) scale(1.4)">
+    <path d="M30 0 L36 20 L56 26 L36 32 L30 52 L24 32 L4 26 L24 20 Z" fill="#ffffff" />
+  </g>
+  <g transform="translate(170, 240) scale(0.9)">
+    <path d="M30 0 L36 20 L56 26 L36 32 L30 52 L24 32 L4 26 L24 20 Z" fill="#fde047" opacity="0.8" />
+  </g>
 </svg>
