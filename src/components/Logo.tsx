@@ -12,17 +12,11 @@ export default function Logo({
   className = "",
   size = "md"
 }: LogoProps) {
-  // Sizing definitions for icon mark
-  const iconSizes = {
-    sm: "w-8 h-8",
-    md: "w-10 h-10",
-    lg: "w-12 h-12"
-  };
-
-  const pixelDimensions = {
-    sm: 32,
-    md: 40,
-    lg: 48
+  // Sizing definitions for user's logo.png emblem
+  const iconDimensions = {
+    sm: "h-7 w-12 sm:h-8 sm:w-14",
+    md: "h-8 w-14 sm:h-10 sm:w-16",
+    lg: "h-10 w-16 sm:h-12 sm:w-20"
   };
 
   const textSizes = {
@@ -33,14 +27,14 @@ export default function Logo({
 
   const IconEmblem = (
     <div
-      className={`relative ${iconSizes[size]} shrink-0 transition-transform duration-300 group-hover:scale-105`}
+      className={`relative ${iconDimensions[size]} shrink-0 transition-transform duration-300 group-hover:scale-105`}
     >
       <Image
-        src="/images/logo/logo-app-icon.webp"
+        src="/logo.png"
         alt="Pickup & Rental Logo"
-        width={pixelDimensions[size]}
-        height={pixelDimensions[size]}
-        className="w-full h-full object-contain rounded-xl drop-shadow-[0_4px_16px_rgba(251,188,43,0.4)]"
+        fill
+        sizes="(max-width: 768px) 60px, 80px"
+        className="object-contain drop-shadow-[0_2px_12px_rgba(251,188,43,0.35)]"
         priority
       />
     </div>
