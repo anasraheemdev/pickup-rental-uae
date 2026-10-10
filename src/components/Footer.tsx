@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { PHONE_NUMBER, PHONE_DISPLAY, WHATSAPP_NUMBER } from "@/lib/seo";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -226,13 +227,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Legal, Sitemap & Copyright Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant/80">
-          <div className="flex items-center gap-2.5">
-            <span className="w-2 h-2 rounded-full bg-secondary"></span>
-            <span>© 2026 Pickup &amp; Rental. All rights reserved across the UAE.</span>
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-on-surface-variant/80">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <Link href="/" aria-label="Pickup & Rental">
+              <Logo size="sm" />
+            </Link>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              <span>© 2026 Pickup &amp; Rental. All rights reserved across the UAE.</span>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 font-label-mono text-xs">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-label-mono text-xs">
             <Link href="/privacy-policy" className="hover:text-secondary transition-colors">
               Privacy Policy
             </Link>

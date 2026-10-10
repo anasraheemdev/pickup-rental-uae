@@ -24,6 +24,16 @@ export const metadata: Metadata = {
     "Inter Emirate Freight",
     "B2B Fleet Retainers"
   ],
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" }
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180" }
+    ],
+    shortcut: ["/icon.svg"]
+  }
 };
 
 export default function RootLayout({

@@ -1,0 +1,48 @@
+<svg viewBox="0 0 340 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="emblemBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0f1f33" />
+      <stop offset="50%" stopColor="#081421" />
+      <stop offset="100%" stopColor="#040a12" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ffe071" />
+      <stop offset="50%" stopColor="#fbbc2b" />
+      <stop offset="100%" stopColor="#d9970a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Icon Mark (64x64 at x=8, y=8) -->
+  <g transform="translate(8, 8) scale(0.5333)">
+    <!-- Squircle Base Shield -->
+    <rect x="4" y="4" width="112" height="112" rx="26" fill="url(#emblemBg)" stroke="#fbbc2b" stroke-width="3" />
+    <!-- Highway Line -->
+    <path d="M18 88 L102 88" stroke="#fbbc2b" stroke-width="3.5" stroke-linecap="round" stroke-opacity="0.8" />
+    <!-- Forward Movement Chevron -->
+    <path d="M98 52 L106 58 L98 64" stroke="#fbbc2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Pickup Cab & Cargo Bed -->
+    <path d="M48 40 L68 40 C73 40, 78 44, 81 49 L89 60 L48 60 Z" fill="url(#goldGradient)" />
+    <path d="M54 44 L67 44 C70 44, 73 46, 75 50 L81 57 L54 57 Z" fill="#081421" />
+    <path d="M24 58 L46 58 L48 48 L48 60 L92 60 C96 60, 99 63, 98 67 L95 76 C94 78, 92 80, 89 80 L25 80 C23 80, 21 78, 21 75 L22 62 C22 60, 23 58, 24 58 Z" fill="url(#goldGradient)" />
+    <!-- Cargo Box -->
+    <rect x="26" y="45" width="19" height="14" rx="2" fill="#ffffff" />
+    <path d="M28 47 L43 57 M43 47 L28 57" stroke="#081421" stroke-width="1.5" />
+    <!-- Headlight Beam -->
+    <path d="M93 64 L102 65 C104 65, 104 67, 102 68 L92 69 Z" fill="#ffffff" />
+    <!-- Wheels -->
+    <circle cx="80" cy="80" r="11" fill="#081421" stroke="#fbbc2b" stroke-width="2.8" />
+    <circle cx="80" cy="80" r="4.5" fill="url(#goldGradient)" />
+    <circle cx="38" cy="80" r="11" fill="#081421" stroke="#fbbc2b" stroke-width="2.8" />
+    <circle cx="38" cy="80" r="4.5" fill="url(#goldGradient)" />
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="86" y="41" fill="#ffffff" font-family="'Plus Jakarta Sans', Inter, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5">
+    PICKUP <tspan fill="#fbbc2b">&amp;</tspan> RENTAL
+  </text>
+  
+  <circle cx="88" cy="56" r="3" fill="#fbbc2b" />
+  <text x="96" y="59" fill="#94a3b8" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="2.5">
+    UAE ROAD TRANSPORT
+  </text>
+</svg>

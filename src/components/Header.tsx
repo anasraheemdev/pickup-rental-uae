@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PHONE_NUMBER, PHONE_DISPLAY, WHATSAPP_NUMBER } from "@/lib/seo";
+import Logo from "@/components/Logo";
 
 interface NavSubItem {
   name: string;
@@ -172,19 +173,10 @@ export default function Header() {
             {/* Logo & Brand Identity */}
             <Link
               href="/"
-              className="flex items-center gap-2.5 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-full"
+              className="flex items-center shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-full"
+              aria-label="Pickup & Rental UAE Homepage"
             >
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-secondary/25 via-secondary/15 to-secondary/5 border border-secondary/40 flex items-center justify-center text-secondary group-hover:scale-105 group-hover:bg-secondary group-hover:text-slate-950 transition-all shadow-[0_0_12px_rgba(251,188,43,0.2)] shrink-0">
-                <span className="material-symbols-outlined text-[18px] sm:text-[20px]">local_shipping</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-sm sm:text-base font-extrabold tracking-tight text-white leading-tight group-hover:text-secondary transition-colors">
-                  PICKUP &amp; RENTAL
-                </span>
-                <span className="font-label-mono text-[8px] sm:text-[9px] uppercase text-secondary font-bold tracking-widest leading-none">
-                  UAE Road Transport
-                </span>
-              </div>
+              <Logo size="md" />
             </Link>
 
             {/* Desktop Navigation Links */}
