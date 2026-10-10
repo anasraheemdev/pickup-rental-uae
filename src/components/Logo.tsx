@@ -12,17 +12,27 @@ export default function Logo({
   className = "",
   size = "md"
 }: LogoProps) {
-  // Sizing definitions for user's logo.png emblem
+  // Proportional sizing for logo.png (exact aspect ratio 1.7:1)
+  // Perfectly calibrated for mobile screens so it never overflows or dominates
   const iconDimensions = {
-    sm: "h-7 w-12 sm:h-8 sm:w-14",
-    md: "h-8 w-14 sm:h-10 sm:w-16",
-    lg: "h-10 w-16 sm:h-12 sm:w-20"
+    sm: "h-[16px] w-[27px] sm:h-5 sm:w-[34px]",
+    md: "h-[20px] w-[34px] sm:h-7 sm:w-[48px] lg:h-8 lg:w-[54px]",
+    lg: "h-6 w-[41px] sm:h-8 sm:w-[54px] lg:h-10 lg:w-[68px]"
   };
 
   const textSizes = {
-    sm: { title: "text-sm", subtitle: "text-[8px]" },
-    md: { title: "text-base sm:text-lg", subtitle: "text-[9px] sm:text-[10px]" },
-    lg: { title: "text-xl sm:text-2xl", subtitle: "text-[11px]" }
+    sm: {
+      title: "text-[10.5px] sm:text-xs",
+      subtitle: "text-[6.5px] sm:text-[7.5px]"
+    },
+    md: {
+      title: "text-[11.5px] sm:text-[14.5px] lg:text-base",
+      subtitle: "text-[7px] sm:text-[8px] lg:text-[9px]"
+    },
+    lg: {
+      title: "text-xs sm:text-base lg:text-lg",
+      subtitle: "text-[7.5px] sm:text-[9px]"
+    }
   };
 
   const IconEmblem = (
@@ -33,8 +43,8 @@ export default function Logo({
         src="/logo.png"
         alt="Pickup & Rental Logo"
         fill
-        sizes="(max-width: 768px) 60px, 80px"
-        className="object-contain drop-shadow-[0_2px_12px_rgba(251,188,43,0.35)]"
+        sizes="(max-width: 640px) 40px, 60px"
+        className="object-contain drop-shadow-[0_1px_8px_rgba(251,188,43,0.3)]"
         priority
       />
     </div>
@@ -45,20 +55,20 @@ export default function Logo({
   }
 
   return (
-    <div className={`inline-flex items-center gap-2.5 sm:gap-3 ${className}`}>
+    <div className={`inline-flex items-center gap-1.5 sm:gap-2.5 ${className}`}>
       {IconEmblem}
-      <div className="flex flex-col select-none">
-        <div className="flex items-center gap-1.5 leading-none">
+      <div className="flex flex-col select-none justify-center">
+        <div className="flex items-center gap-1 leading-tight">
           <span
-            className={`font-display font-extrabold tracking-tight text-white uppercase ${textSizes[size].title} drop-shadow-sm`}
+            className={`font-display font-extrabold tracking-tight text-white uppercase ${textSizes[size].title} drop-shadow-sm whitespace-nowrap`}
           >
             PICKUP <span className="text-secondary">&amp;</span> RENTAL
           </span>
         </div>
-        <div className="flex items-center gap-1.5 mt-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+        <div className="flex items-center gap-1 mt-0.5">
+          <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-secondary animate-pulse shrink-0"></span>
           <span
-            className={`font-label-mono uppercase font-bold tracking-widest text-slate-300 ${textSizes[size].subtitle}`}
+            className={`font-label-mono uppercase font-bold tracking-wider text-slate-300 whitespace-nowrap ${textSizes[size].subtitle}`}
           >
             UAE ROAD TRANSPORT
           </span>

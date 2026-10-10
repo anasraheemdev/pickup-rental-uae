@@ -169,7 +169,7 @@ export default function Header() {
           aria-label="Main Navigation"
           className="pointer-events-auto max-w-[1360px] mx-auto rounded-2xl lg:rounded-full bg-slate-950/90 backdrop-blur-2xl border border-white/10 hover:border-white/20 shadow-[0_16px_45px_-8px_rgba(0,0,0,0.85),0_4px_18px_rgba(0,0,0,0.5),0_0_25px_-5px_rgba(251,188,43,0.12),0_1px_0_0_rgba(255,255,255,0.1)_inset] transition-all duration-300"
         >
-          <div className="h-14 sm:h-16 px-3.5 sm:px-6 flex items-center justify-between gap-3 sm:gap-6">
+          <div className="h-13 sm:h-16 px-3 sm:px-6 flex items-center justify-between gap-2 sm:gap-6">
             {/* Logo & Brand Identity */}
             <Link
               href="/"
@@ -276,7 +276,7 @@ export default function Header() {
 
               <Link
                 href="/request-quote"
-                className="inline-flex items-center justify-center h-8 sm:h-9 px-3.5 sm:px-5 rounded-full bg-gradient-to-r from-secondary via-[#ffc634] to-[#f5ab0c] text-slate-950 font-label-lg text-xs sm:text-xs font-black shadow-[0_4px_18px_rgba(251,188,43,0.35)] hover:shadow-[0_6px_24px_rgba(251,188,43,0.55)] hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
+                className="inline-flex items-center justify-center h-7.5 sm:h-9 px-3 sm:px-5 rounded-full bg-gradient-to-r from-secondary via-[#ffc634] to-[#f5ab0c] text-slate-950 font-label-lg text-[11px] sm:text-xs font-black shadow-[0_4px_18px_rgba(251,188,43,0.35)] hover:shadow-[0_6px_24px_rgba(251,188,43,0.55)] hover:scale-105 active:scale-95 transition-all whitespace-nowrap shrink-0"
               >
                 <span className="hidden sm:inline">Request a Quote</span>
                 <span className="sm:hidden">Get Quote</span>
@@ -285,11 +285,11 @@ export default function Header() {
               {/* Mobile Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="xl:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 flex items-center justify-center text-slate-200 hover:text-secondary hover:border-secondary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary shrink-0"
+                className="xl:hidden w-7.5 h-7.5 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 flex items-center justify-center text-slate-200 hover:text-secondary hover:border-secondary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary shrink-0"
                 aria-label="Toggle navigation menu"
                 aria-expanded={mobileMenuOpen}
               >
-                <span className="material-symbols-outlined text-[18px] sm:text-[20px]">
+                <span className="material-symbols-outlined text-[17px] sm:text-[20px]">
                   {mobileMenuOpen ? "close" : "menu"}
                 </span>
               </button>
