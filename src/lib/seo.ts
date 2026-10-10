@@ -79,6 +79,12 @@ export function constructMetadata({
         "max-snippet": -1,
       },
     },
+    verification: {
+      google: [
+        "zueug1q6zHtsF-DhZ0ZvD9o5c6oplalz3wQg1ULJhlM",
+        "googleb28235d9f7a78d91"
+      ],
+    },
   };
 }
 
@@ -89,7 +95,7 @@ export function getOrganizationSchema() {
     "@id": `${SITE_URL}/#organization`,
     name: BRAND_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/favicon.ico`,
+    logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}/images/screens/09_home.png`,
     telephone: PHONE_NUMBER,
     email: SUPPORT_EMAIL,

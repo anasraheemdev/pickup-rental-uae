@@ -34,6 +34,12 @@ export const metadata: Metadata = {
       { url: "/apple-icon.png", sizes: "180x180" }
     ],
     shortcut: ["/icon.png", "/favicon.ico"]
+  },
+  verification: {
+    google: [
+      "zueug1q6zHtsF-DhZ0ZvD9o5c6oplalz3wQg1ULJhlM",
+      "googleb28235d9f7a78d91"
+    ],
   }
 };
 
@@ -45,6 +51,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
+        <meta
+          name="google-site-verification"
+          content="zueug1q6zHtsF-DhZ0ZvD9o5c6oplalz3wQg1ULJhlM"
+        />
+        <meta
+          name="google-site-verification"
+          content="googleb28235d9f7a78d91"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
